@@ -98,7 +98,7 @@ public class Money extends ValueObject{
         hashCode = (hashCode * 397) ^ this.oneDollarCount;
         hashCode = (hashCode * 397) ^ this.fiveDollarCount;
         hashCode = (hashCode * 397) ^ this.twentyDollarCount;
-        
+
         return hashCode;
     }
 }
