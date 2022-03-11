@@ -1,6 +1,6 @@
 package com.example.test_java_fx.domain;
 
-public class SnackMachine {
+public class SnackMachine extends Entity{
     public Money moneyInsideSnack;
     public Money moneyInTransaction;
 
@@ -17,7 +17,7 @@ public class SnackMachine {
      * @param money
      */
     public void insertMoney(Money money){
-        Money.operatorPlus(moneyInTransaction, money);
+        this.moneyInTransaction = Money.operatorPlus(moneyInTransaction, money);
     }
 
 
@@ -37,7 +37,7 @@ public class SnackMachine {
 
 
     public void chargeTheMoneyInSnack(){
-        Money.operatorPlus(moneyInsideSnack , moneyInTransaction);
+        this.moneyInsideSnack = Money.operatorPlus(this.moneyInsideSnack , moneyInTransaction);
     }
 
     public void emptyTheSnackTransaction(){
