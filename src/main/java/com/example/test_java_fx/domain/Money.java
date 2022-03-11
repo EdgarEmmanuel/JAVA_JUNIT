@@ -9,6 +9,8 @@ public class Money extends ValueObject{
     public int twentyDollarCount;
 
     public Money(int oneCentCount, int tenCentCount, int quarterCount, int oneDollarCount, int fiveDollarCount, int twentyDollarCount) {
+        if(oneCentCount < 0 || tenCentCount < 0 || quarterCount < 0 || oneDollarCount < 0 || fiveDollarCount < 0 || twentyDollarCount < 0)
+            throw new ArithmeticException();
         this.oneCentCount = oneCentCount;
         this.tenCentCount = tenCentCount;
         this.quarterCount = quarterCount;
