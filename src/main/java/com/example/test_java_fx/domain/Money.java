@@ -1,6 +1,6 @@
 package com.example.test_java_fx.domain;
 
-public class Money {
+public class Money extends ValueObject{
     public int oneCentCount;
     public int tenCentCount;
     public int quarterCount;
@@ -77,5 +77,28 @@ public class Money {
 
     public void setTwentyDollarCount(int twentyDollarCount) {
         this.twentyDollarCount = twentyDollarCount;
+    }
+
+    @Override
+    public boolean equalsCore(ValueObject o) {
+        Money second = (Money)o;
+        return this.oneCentCount == second.oneCentCount &&
+        this.tenCentCount == second.tenCentCount &&
+                this.quarterCount == second.quarterCount &&
+                this.oneDollarCount == second.oneDollarCount &&
+                this.fiveDollarCount == second.fiveDollarCount &&
+                this.twentyDollarCount == second.twentyDollarCount;
+    }
+
+    @Override
+    public int hashCodeCore() {
+        int hashCode = this.oneCentCount;
+        hashCode = (hashCode * 397) ^ this.tenCentCount;
+        hashCode = (hashCode * 397) ^ this.quarterCount;
+        hashCode = (hashCode * 397) ^ this.oneDollarCount;
+        hashCode = (hashCode * 397) ^ this.fiveDollarCount;
+        hashCode = (hashCode * 397) ^ this.twentyDollarCount;
+        
+        return hashCode;
     }
 }
