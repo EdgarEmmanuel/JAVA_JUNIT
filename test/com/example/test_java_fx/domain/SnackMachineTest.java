@@ -17,4 +17,15 @@ class SnackMachineTest {
 
         assertEquals(0, snack.moneyInTransaction.amount);
     }
+
+    @Test
+    public void insert_money_should_go_to_money_in_transaction()
+    {
+        SnackMachine snack = new SnackMachine();
+        Money oneDollar = Money.OneDollar;
+
+        snack.insertMoney(oneDollar);
+
+        assertEquals(1, snack.moneyInTransaction.amount);
+    }
 }
