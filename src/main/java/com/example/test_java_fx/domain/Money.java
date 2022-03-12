@@ -9,18 +9,6 @@ public class Money extends ValueObject{
     public double twentyDollarCount;
     public double amount;
 
-    public void setTwentyDollarCount(double twentyDollarCount) {
-        this.twentyDollarCount = twentyDollarCount;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
     public void Amount(double oneCentCount, double tenCentCount, double quarterCount, double oneDollarCount, double fiveDollarCount, double twentyDollarCount)
     {
         this.amount = (oneCentCount * 0.01 )+ (tenCentCount*0.10) + (quarterCount*0.25) + oneDollarCount + fiveDollarCount*5 + twentyDollarCount*20;
@@ -57,49 +45,29 @@ public class Money extends ValueObject{
         return oneCentCount;
     }
 
-    public void setOneCentCount(double oneCentCount) {
-        this.oneCentCount = oneCentCount;
-    }
-
     public double getTenCentCount() {
         return tenCentCount;
     }
 
-    public void setTenCentCount(double tenCentCount) {
-        this.tenCentCount = tenCentCount;
-    }
 
     public double getQuarterCount() {
         return quarterCount;
     }
 
-    public void setQuarterCount(double quarterCount) {
-        this.quarterCount = quarterCount;
-    }
 
     public double getOneDollarCount() {
         return oneDollarCount;
     }
 
-    public void setOneDollarCount(double oneDollarCount) {
-        this.oneDollarCount = oneDollarCount;
-    }
 
     public double getFiveDollarCount() {
         return fiveDollarCount;
-    }
-
-    public void setFiveDollarCount(double fiveDollarCount) {
-        this.fiveDollarCount = fiveDollarCount;
     }
 
     public double getTwentyDollarCount() {
         return twentyDollarCount;
     }
 
-    public void setTwentyDollarCount(int twentyDollarCount) {
-        this.twentyDollarCount = twentyDollarCount;
-    }
 
     @Override
     public boolean equalsCore(ValueObject o) {
