@@ -1,7 +1,7 @@
 package com.example.test_java_fx.domain;
 
 public class Money extends ValueObject{
-    public static Money None = new Money(0,0,0,0,0,0);
+
     public double oneCentCount;
     public double tenCentCount;
     public double quarterCount;
@@ -9,6 +9,9 @@ public class Money extends ValueObject{
     public double fiveDollarCount;
     public double twentyDollarCount;
     public double amount;
+
+    public static Money None = new Money(0,0,0,0,0,0);
+    public static Money OneDollar = new Money(0,0,0,1,0,0);
 
     public void Amount(double oneCentCount, double tenCentCount, double quarterCount, double oneDollarCount, double fiveDollarCount, double twentyDollarCount)
     {
