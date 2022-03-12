@@ -27,6 +27,18 @@ public class Money extends ValueObject{
         this.Amount(oneCentCount,tenCentCount,quarterCount,oneDollarCount,fiveDollarCount,twentyDollarCount);
     }
 
+    public static Money substractOperator(Money moneyOne, Money moneyTwo){
+        Money substract = new Money(
+                moneyOne.oneCentCount - moneyTwo.oneCentCount,
+                moneyOne.tenCentCount - moneyTwo.tenCentCount,
+                moneyOne.quarterCount - moneyTwo.quarterCount,
+                moneyOne.oneDollarCount - moneyTwo.oneDollarCount,
+                moneyOne.fiveDollarCount - moneyTwo.fiveDollarCount,
+                moneyOne.twentyDollarCount - moneyTwo.twentyDollarCount
+        );
+
+        return substract;
+    }
 
     public static Money operatorPlus(Money moneyOne, Money moneyTwo){
         Money sum = new Money(

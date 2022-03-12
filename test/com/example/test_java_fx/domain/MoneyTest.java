@@ -100,4 +100,33 @@ class MoneyTest {
         };
         return value;
     }
+
+    @Test
+    public void subtraction_of_two_moneys_work_fine()
+    {
+        Money money = new Money(10,2,33,40,15,16);
+        Money money_two = new Money(1,0,30,4,5,6);
+
+        Money sum = Money.substractOperator(money , money_two);
+
+        assertEquals(9, sum.oneCentCount);
+        assertEquals(2, sum.tenCentCount);
+        assertEquals(3, sum.quarterCount);
+        assertEquals(36, sum.oneDollarCount);
+        assertEquals(10, sum.fiveDollarCount);
+        assertEquals(10, sum.twentyDollarCount);
+    }
+
+
+    @Test
+    public void subtraction_throw_exception_when_there_is_no_amount()
+    {
+        Money money = new Money(0,1,0,0,0,0);
+        Money money_two = new Money(1,0,0,0,0,0);
+
+
+        assertThrows(ArithmeticException.class, () -> {
+            Money sum = Money.substractOperator(money , money_two);
+        });
+    }
 }
