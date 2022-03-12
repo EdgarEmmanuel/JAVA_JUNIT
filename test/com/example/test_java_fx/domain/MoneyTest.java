@@ -76,27 +76,27 @@ class MoneyTest {
     @ParameterizedTest
     @MethodSource("amounts")
     public void amount_is_calculated_correctly(
-            int oneCentCount,
-            int tenCentCount,
-            int quarterCount,
-            int oneDollarCount,
-            int fiveDollarCount,
-            int twentyDollarCount,
-            int amount
+            double oneCentCount,
+            double tenCentCount,
+            double quarterCount,
+            double oneDollarCount,
+            double fiveDollarCount,
+            double twentyDollarCount,
+            double amount
     ){
         Money money = new Money(oneCentCount,tenCentCount,quarterCount,oneDollarCount,fiveDollarCount,twentyDollarCount);
 
         assertEquals(amount, money.amount);
     }
 
-    static Integer[][] amounts() {
-        Integer[][] value = new Integer[][]{
-                {0,0,0,0,0,0,0},
-                {0,2,0,0,0,0,2},
-                {1,0,3,0,0,0,4},
-                {0,0,0,4,2,0,6},
-                {0,0,0,0,5,0,5},
-                {0,0,0,0,0,6,6}
+    static Double[][] amounts() {
+        Double[][] value = new Double[][]{
+                {0.0,0.0,0.0,0.0,0.0,0.0,0.0},
+                {1.0,2.0,0.0,0.0,0.0,0.0,0.21000000000000002},
+                {1.1,0.0,3.5,0.0,0.0,0.0,0.886},
+                {0.0,0.0,0.0,4.5,2.5,0.0,17.0},
+                {0.0,0.0,0.0,0.0,5.0,0.0,25.0},
+                {0.0,100.0,0.0,0.0,50.0,6.0,380.0}
         };
         return value;
     }

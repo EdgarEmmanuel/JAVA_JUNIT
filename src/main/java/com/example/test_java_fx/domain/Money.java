@@ -23,7 +23,7 @@ public class Money extends ValueObject{
 
     public void Amount(double oneCentCount, double tenCentCount, double quarterCount, double oneDollarCount, double fiveDollarCount, double twentyDollarCount)
     {
-        this.amount = oneCentCount + tenCentCount + quarterCount + oneDollarCount + fiveDollarCount + twentyDollarCount;
+        this.amount = (oneCentCount * 0.01 )+ (tenCentCount*0.10) + (quarterCount*0.25) + oneDollarCount + fiveDollarCount*5 + twentyDollarCount*20;
     }
 
     public Money(double oneCentCount, double tenCentCount, double quarterCount, double oneDollarCount, double fiveDollarCount, double twentyDollarCount) {
