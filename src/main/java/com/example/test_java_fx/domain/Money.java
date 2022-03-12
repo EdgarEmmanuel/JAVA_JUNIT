@@ -9,6 +9,23 @@ public class Money extends ValueObject{
     public double twentyDollarCount;
     public double amount;
 
+    public void setTwentyDollarCount(double twentyDollarCount) {
+        this.twentyDollarCount = twentyDollarCount;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public void Amount(double oneCentCount, double tenCentCount, double quarterCount, double oneDollarCount, double fiveDollarCount, double twentyDollarCount)
+    {
+        this.amount = oneCentCount + tenCentCount + quarterCount + oneDollarCount + fiveDollarCount + twentyDollarCount;
+    }
+
     public Money(double oneCentCount, double tenCentCount, double quarterCount, double oneDollarCount, double fiveDollarCount, double twentyDollarCount) {
         if(oneCentCount < 0 || tenCentCount < 0 || quarterCount < 0 || oneDollarCount < 0 || fiveDollarCount < 0 || twentyDollarCount < 0)
             throw new ArithmeticException();
@@ -18,6 +35,8 @@ public class Money extends ValueObject{
         this.oneDollarCount = oneDollarCount;
         this.fiveDollarCount = fiveDollarCount;
         this.twentyDollarCount = twentyDollarCount;
+
+        this.Amount(oneCentCount,tenCentCount,quarterCount,oneDollarCount,fiveDollarCount,twentyDollarCount);
     }
 
 
