@@ -5,7 +5,7 @@ public class SnackMachine extends Entity{
     public Money moneyInTransaction;
 
     public SnackMachine(){
-        this.moneyInTransaction = new Money(0,0,0,0,0,0);
+        this.moneyInTransaction = Money.None;
     }
 
     /**
@@ -37,7 +37,7 @@ public class SnackMachine extends Entity{
     }
 
     public void emptyTheSnackTransaction(){
-        this.moneyInTransaction = new Money(0,0,0,0,0,0);
+        this.moneyInTransaction = Money.None;
     }
 
 

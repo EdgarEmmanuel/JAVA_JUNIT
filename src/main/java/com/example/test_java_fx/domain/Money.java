@@ -1,6 +1,7 @@
 package com.example.test_java_fx.domain;
 
 public class Money extends ValueObject{
+    public static Money None = new Money(0,0,0,0,0,0);
     public double oneCentCount;
     public double tenCentCount;
     public double quarterCount;
