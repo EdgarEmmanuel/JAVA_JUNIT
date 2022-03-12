@@ -4,13 +4,9 @@ public class SnackMachine extends Entity{
     public Money moneyInsideSnack;
     public Money moneyInTransaction;
 
-
-    public int oneCentCountInTransaction;
-    public int tenCentCountIntTransaction;
-    public int quarterCountInTransaction;
-    public int oneDollarCountInTransaction;
-    public int fiveDollarCountInTransaction;
-    public int twentyDollarCountInTransaction;
+    public SnackMachine(){
+        this.moneyInTransaction = new Money(0,0,0,0,0,0);
+    }
 
     /**
      * this function permits the user to insert money
@@ -41,7 +37,7 @@ public class SnackMachine extends Entity{
     }
 
     public void emptyTheSnackTransaction(){
-        //moneyInTransaction = 0
+        this.moneyInTransaction = new Money(0,0,0,0,0,0);
     }
 
 
