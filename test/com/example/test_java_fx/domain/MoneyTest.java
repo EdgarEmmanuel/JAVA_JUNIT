@@ -72,4 +72,32 @@ class MoneyTest {
         };
         return value;
     }
+
+    @ParameterizedTest
+    @MethodSource("amounts")
+    public void amount_is_calculated_correctly(
+            int oneCentCount,
+            int tenCentCount,
+            int quarterCount,
+            int oneDollarCount,
+            int fiveDollarCount,
+            int twentyDollarCount,
+            int amount
+    ){
+        Money money = new Money(oneCentCount,tenCentCount,quarterCount,oneDollarCount,fiveDollarCount,twentyDollarCount);
+
+        assertEquals(amount, money.amount);
+    }
+
+    static Integer[][] amounts() {
+        Integer[][] value = new Integer[][]{
+                {0,0,0,0,0,0,0},
+                {0,2,0,0,0,0,2},
+                {1,0,3,0,0,0,4},
+                {0,0,0,4,2,0,6},
+                {0,0,0,0,5,0,5},
+                {0,0,0,0,0,6,6}
+        };
+        return value;
+    }
 }

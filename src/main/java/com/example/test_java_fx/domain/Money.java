@@ -1,14 +1,15 @@
 package com.example.test_java_fx.domain;
 
 public class Money extends ValueObject{
-    public int oneCentCount;
-    public int tenCentCount;
-    public int quarterCount;
-    public int oneDollarCount;
-    public int fiveDollarCount;
-    public int twentyDollarCount;
+    public double oneCentCount;
+    public double tenCentCount;
+    public double quarterCount;
+    public double oneDollarCount;
+    public double fiveDollarCount;
+    public double twentyDollarCount;
+    public double amount;
 
-    public Money(int oneCentCount, int tenCentCount, int quarterCount, int oneDollarCount, int fiveDollarCount, int twentyDollarCount) {
+    public Money(double oneCentCount, double tenCentCount, double quarterCount, double oneDollarCount, double fiveDollarCount, double twentyDollarCount) {
         if(oneCentCount < 0 || tenCentCount < 0 || quarterCount < 0 || oneDollarCount < 0 || fiveDollarCount < 0 || twentyDollarCount < 0)
             throw new ArithmeticException();
         this.oneCentCount = oneCentCount;
@@ -33,47 +34,47 @@ public class Money extends ValueObject{
         return sum;
     }
 
-    public int getOneCentCount() {
+    public double getOneCentCount() {
         return oneCentCount;
     }
 
-    public void setOneCentCount(int oneCentCount) {
+    public void setOneCentCount(double oneCentCount) {
         this.oneCentCount = oneCentCount;
     }
 
-    public int getTenCentCount() {
+    public double getTenCentCount() {
         return tenCentCount;
     }
 
-    public void setTenCentCount(int tenCentCount) {
+    public void setTenCentCount(double tenCentCount) {
         this.tenCentCount = tenCentCount;
     }
 
-    public int getQuarterCount() {
+    public double getQuarterCount() {
         return quarterCount;
     }
 
-    public void setQuarterCount(int quarterCount) {
+    public void setQuarterCount(double quarterCount) {
         this.quarterCount = quarterCount;
     }
 
-    public int getOneDollarCount() {
+    public double getOneDollarCount() {
         return oneDollarCount;
     }
 
-    public void setOneDollarCount(int oneDollarCount) {
+    public void setOneDollarCount(double oneDollarCount) {
         this.oneDollarCount = oneDollarCount;
     }
 
-    public int getFiveDollarCount() {
+    public double getFiveDollarCount() {
         return fiveDollarCount;
     }
 
-    public void setFiveDollarCount(int fiveDollarCount) {
+    public void setFiveDollarCount(double fiveDollarCount) {
         this.fiveDollarCount = fiveDollarCount;
     }
 
-    public int getTwentyDollarCount() {
+    public double getTwentyDollarCount() {
         return twentyDollarCount;
     }
 
@@ -94,12 +95,12 @@ public class Money extends ValueObject{
 
     @Override
     public int hashCodeCore() {
-        int hashCode = this.oneCentCount;
-        hashCode = (hashCode * 397) ^ this.tenCentCount;
-        hashCode = (hashCode * 397) ^ this.quarterCount;
-        hashCode = (hashCode * 397) ^ this.oneDollarCount;
-        hashCode = (hashCode * 397) ^ this.fiveDollarCount;
-        hashCode = (hashCode * 397) ^ this.twentyDollarCount;
+        int hashCode = (int)this.oneCentCount;
+        hashCode = (hashCode * 397) ^ (int)this.tenCentCount;
+        hashCode = (hashCode * 397) ^ (int)this.quarterCount;
+        hashCode = (hashCode * 397) ^ (int)this.oneDollarCount;
+        hashCode = (hashCode * 397) ^ (int)this.fiveDollarCount;
+        hashCode = (hashCode * 397) ^ (int)this.twentyDollarCount;
 
         return hashCode;
     }
