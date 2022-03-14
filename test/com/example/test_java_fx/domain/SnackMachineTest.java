@@ -28,4 +28,17 @@ class SnackMachineTest {
 
         assertEquals(1, snack.moneyInTransaction.amount);
     }
+
+
+    @Test
+    public void should_insert_only_money_recognize_by_snack_machine()
+    {
+        SnackMachine snack = new SnackMachine();
+
+
+        assertThrows(ArithmeticException.class, () -> {
+            Money twoDollar = Money.operatorPlus(Money.OneDollar, Money.OneDollar);
+            snack.insertMoney(twoDollar);
+        });
+    }
 }

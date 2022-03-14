@@ -13,9 +13,15 @@ public class SnackMachine extends Entity{
      * @param money
      */
     public void insertMoney(Money money){
+        this.verifyMoney(money);
         this.moneyInTransaction = Money.operatorPlus(moneyInTransaction, money);
     }
 
+    private void verifyMoney(Money money)
+    {
+        if(money != Money.OneDollar && money != Money.OneCent && money != Money.FiveDollar && money != Money.QuarterCent && money != Money.TenCent && money != Money.TwentyDollar)
+            throw new ArithmeticException();
+    }
 
     /**
      * this function is invoked when the user wants to cancel his request
