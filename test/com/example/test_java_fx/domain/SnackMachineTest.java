@@ -41,4 +41,18 @@ class SnackMachineTest {
             snack.insertMoney(twoDollar);
         });
     }
+
+    @Test
+    public void money_in_transaction_goes_to_money_inside_after_purchase()
+    {
+        SnackMachine snack = new SnackMachine();
+        Money current = Money.operatorPlus(Money.OneDollar, Money.TwentyDollar);
+        snack.insertMoney(Money.OneDollar);
+        snack.insertMoney(Money.TwentyDollar);
+
+        snack.buySnack();
+
+        assertEquals(Money.None.amount, snack.moneyInTransaction.amount);
+        assertEquals(current.amount, snack.moneyInsideSnack.amount);
+    }
 }
