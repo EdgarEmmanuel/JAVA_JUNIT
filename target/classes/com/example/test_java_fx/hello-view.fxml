@@ -20,6 +20,8 @@
       <Button fx:id="button_fiveDollar" layoutX="247.0" layoutY="227.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="110.0" style="-fx-font-size: 20;" text="Put $5" />
       <Button fx:id="button_twentyDollar" layoutX="399.0" layoutY="227.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="110.0" style="-fx-font-size: 20;" text="Put $20" />
       <Button fx:id="button_returnMoney" layoutX="216.0" layoutY="287.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="172.0" text="Return Money" />
-      <ImageView fx:id="imageView_oneCent" fitHeight="150.0" fitWidth="200.0" layoutX="23.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imageView_oneCent" fitHeight="150.0" fitWidth="148.0" layoutX="23.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imageView_tenCent" fitHeight="150.0" fitWidth="148.0" layoutX="241.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imageView_twentyFiveCent" fitHeight="150.0" fitWidth="148.0" layoutX="435.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </Pane>

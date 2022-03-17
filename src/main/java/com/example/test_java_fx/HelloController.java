@@ -36,9 +36,35 @@ public class HelloController implements Initializable {
     @FXML
     private ImageView imageView_oneCent;
 
+    @FXML
+    private ImageView imageView_tenCent;
+
+    @FXML
+    private ImageView imageView_twentyFiveCent;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        this.initializeOneCentImage();
+        this.initializeTenCentImage();
+        this.initializeTwentyFiveCentImage();
+    }
+
+
+    private void initializeTenCentImage(){
+        File file = new File("src/main/resources/images/tenCent.png");
+        Image image = new Image(file.toURI().toString());
+        imageView_tenCent.setImage(image);
+    }
+
+    private void initializeTwentyFiveCentImage(){
+        File file = new File("src/main/resources/images/twentyFiveCent.png");
+        Image image = new Image(file.toURI().toString());
+        imageView_twentyFiveCent.setImage(image);
+    }
+
+
+    private void initializeOneCentImage(){
         File file = new File("src/main/resources/images/oneCent.png");
         Image image = new Image(file.toURI().toString());
         imageView_oneCent.setImage(image);
