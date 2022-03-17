@@ -1,14 +1,29 @@
 package com.example.test_java_fx;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
+    private Button button_oneCent;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+    private Button button_tenCent;
+
+    @FXML
+    private Button button_twentyFiveCent;
+
+    @FXML
+    private Button button_oneDollar;
+
+    @FXML
+    private Button button_fiveDollar;
+
+    @FXML
+    private Button button_twentyDollar;
+
+    @FXML
+    private Button button_returnMoney;
+
 }
