@@ -1,5 +1,6 @@
 package com.example.test_java_fx;
 
+import com.example.test_java_fx.userInterface.MainViewModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -50,6 +51,14 @@ public class HelloController implements Initializable {
 
     @FXML
     private ImageView imageView_twentyDollar;
+
+    private MainViewModel mainViewModel;
+
+
+    public HelloController()
+    {
+        this.mainViewModel = new MainViewModel();
+    }
 
 
     @Override
