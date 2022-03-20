@@ -45,6 +45,9 @@ public class HelloController implements Initializable {
     @FXML
     private ImageView imageView_oneDollar;
 
+    @FXML
+    private ImageView imageView_fiveDollar;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -52,6 +55,7 @@ public class HelloController implements Initializable {
         this.initializeTenCentImage();
         this.initializeTwentyFiveCentImage();
         this.initializeOneDollarImage();
+        this.initializeFiveDollarImage();
     }
 
 
@@ -71,6 +75,12 @@ public class HelloController implements Initializable {
         File file = new File("src/main/resources/images/oneDolar.png");
         Image image = new Image(file.toURI().toString());
         imageView_oneDollar.setImage(image);
+    }
+
+    private void initializeFiveDollarImage(){
+        File file = new File("src/main/resources/images/fiveDollar.png");
+        Image image = new Image(file.toURI().toString());
+        imageView_fiveDollar.setImage(image);
     }
 
 
