@@ -50,6 +50,13 @@ public class SnackMachineViewModel {
     }
 
 
+    public void insertTwentyDollar(){
+        this.snackMachine.insertMoney(Money.TwentyDollar);
+
+        this.setMoneyInTransaction(snackMachine.moneyInTransaction.amount);
+    }
+
+
     public void setMoneyInTransaction(double money){
         this.moneyInTransaction = Double.toString(money);
     }
