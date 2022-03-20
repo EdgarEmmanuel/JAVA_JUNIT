@@ -16,7 +16,7 @@
             <Font name="FreeSerif" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="button_oneDollar" layoutX="104.0" layoutY="227.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="110.0" style="-fx-font-size: 20;" text="Put $1" />
+      <Button fx:id="button_oneDollar" layoutX="104.0" layoutY="227.0" mnemonicParsing="false" onMouseClicked="#insertOneDollar" prefHeight="39.0" prefWidth="110.0" style="-fx-font-size: 20;" text="Put $1" />
       <Button fx:id="button_fiveDollar" layoutX="247.0" layoutY="227.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="110.0" style="-fx-font-size: 20;" text="Put $5" />
       <Button fx:id="button_twentyDollar" layoutX="399.0" layoutY="227.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="110.0" style="-fx-font-size: 20;" text="Put $20" />
       <Button fx:id="button_returnMoney" layoutX="216.0" layoutY="287.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="172.0" text="Return Money" />
