@@ -4,8 +4,9 @@ import com.example.test_java_fx.domain.SnackMachine;
 
 public class MainViewModel {
 
-    public MainViewModel(){
-        SnackMachineViewModel snackVM = new SnackMachineViewModel(new SnackMachine());
+    public SnackMachineViewModel snackVM;
 
+    public MainViewModel(){
+        this.snackVM = new SnackMachineViewModel(new SnackMachine());
     }
 }
