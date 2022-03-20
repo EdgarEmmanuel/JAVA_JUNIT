@@ -11,7 +11,7 @@
       <Label fx:id="label_moneyInserted" layoutX="223.0" layoutY="91.0" prefWidth="159.0" text="Money Inserted:" />
       <Button fx:id="button_oneCent" layoutX="104.0" layoutY="138.0" mnemonicParsing="false" onMouseClicked="#insertCentInSnack" prefHeight="39.0" prefWidth="110.0" style="-fx-font-size: 20;" text="Put ¢1" />
       <Button fx:id="button_tenCent" layoutX="248.0" layoutY="138.0" mnemonicParsing="false" onMouseClicked="#insertTenCentInSnack" prefHeight="39.0" prefWidth="110.0" style="-fx-font-size: 20;" text="Put ¢10" />
-      <Button fx:id="button_twentyFiveCent" layoutX="399.0" layoutY="138.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="110.0" style="-fx-font-size: 20;" text="Put ¢25">
+      <Button fx:id="button_twentyFiveCent" layoutX="399.0" layoutY="138.0" mnemonicParsing="false" onMouseClicked="#insertQuarterCent" prefHeight="39.0" prefWidth="110.0" style="-fx-font-size: 20;" text="Put ¢25">
          <font>
             <Font name="FreeSerif" size="13.0" />
          </font>

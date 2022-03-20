@@ -31,6 +31,13 @@ public class SnackMachineViewModel {
     }
 
 
+    public void insertTwentyCent(){
+        this.snackMachine.insertMoney(Money.QuarterCent);
+
+        this.setMoneyInTransaction(snackMachine.moneyInTransaction.amount);
+    }
+
+
     public void setMoneyInTransaction(double money){
         this.moneyInTransaction = Double.toString(money);
     }

@@ -91,6 +91,12 @@ public class HelloController implements Initializable {
     }
 
 
+    public void insertQuarterCent(){
+        this.mainViewModel.snackVM.insertTwentyCent();
+        this.updateMoneyInserted();
+    }
+
+
     public void updateMoneyInserted()
     {
         String amount = this.mainViewModel.snackVM.moneyInTransaction;
