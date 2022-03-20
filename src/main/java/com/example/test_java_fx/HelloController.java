@@ -84,6 +84,20 @@ public class HelloController implements Initializable {
         this.initializeLabelInsertMoneyWithSnackData();
     }
 
+    
+    public void insertTenCentInSnack(){
+        this.mainViewModel.snackVM.insertTenCent();
+        this.updateMoneyInserted();
+    }
+
+
+    public void updateMoneyInserted()
+    {
+        String amount = this.mainViewModel.snackVM.moneyInTransaction;
+
+        this.label_moneyInserted.setText("Money Inserted: "+ amount);
+    }
+
 
     private void initializeLabelInsertMoneyWithSnackData()
     {

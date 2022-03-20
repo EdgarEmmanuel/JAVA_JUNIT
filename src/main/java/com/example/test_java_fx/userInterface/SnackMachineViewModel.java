@@ -10,7 +10,7 @@ public class SnackMachineViewModel {
 
     public SnackMachineViewModel(SnackMachine snackMachine)
     {
-        this.moneyInTransaction = Double.toString(snackMachine.moneyInTransaction.amount);
+        this.setMoneyInTransaction(snackMachine.moneyInTransaction.amount);
         this.snackMachine = snackMachine;
     }
 
@@ -19,6 +19,19 @@ public class SnackMachineViewModel {
     {
         this.snackMachine.insertMoney(Money.OneCent);
 
-        this.moneyInTransaction = Double.toString(snackMachine.moneyInTransaction.amount);
+        this.setMoneyInTransaction(snackMachine.moneyInTransaction.amount);
+    }
+
+
+    public void insertTenCent()
+    {
+        this.snackMachine.insertMoney(Money.TenCent);
+
+        this.setMoneyInTransaction(snackMachine.moneyInTransaction.amount);
+    }
+
+
+    public void setMoneyInTransaction(double money){
+        this.moneyInTransaction = Double.toString(money);
     }
 }
