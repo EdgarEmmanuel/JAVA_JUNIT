@@ -35,6 +35,9 @@ public class HelloController implements Initializable {
     private Button button_returnMoney;
 
     @FXML
+    private Label label_moneyInserted;
+
+    @FXML
     private ImageView imageView_oneCent;
 
     @FXML
@@ -69,6 +72,14 @@ public class HelloController implements Initializable {
         this.initializeOneDollarImage();
         this.initializeFiveDollarImage();
         this.initializeTwentyDollarImage();
+    }
+
+
+    private void initializeLabelInsertMoneyWithSnackData()
+    {
+        String amount = this.mainViewModel.snackVM.moneyInTransaction;
+        
+        this.label_moneyInserted.setText("Money Inserted: "+ amount);
     }
 
 
