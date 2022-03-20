@@ -23,6 +23,6 @@
       <ImageView fx:id="imageView_oneCent" fitHeight="89.0" fitWidth="148.0" layoutX="23.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imageView_tenCent" fitHeight="89.0" fitWidth="148.0" layoutX="241.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imageView_twentyFiveCent" fitHeight="89.0" fitWidth="148.0" layoutX="435.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="imageView_oneDollar" fitHeight="89.0" fitWidth="148.0" layoutX="14.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imageView_oneDollar" fitHeight="89.0" fitWidth="148.0" layoutX="30.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </Pane>
