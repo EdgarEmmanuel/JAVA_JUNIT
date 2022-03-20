@@ -15,7 +15,7 @@ public class SnackMachineViewModel {
     }
 
 
-    public void insertCent()
+    public void insertOneCent()
     {
         this.snackMachine.insertMoney(Money.OneCent);
 
