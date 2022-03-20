@@ -59,6 +59,7 @@ public class HelloController implements Initializable {
         this.initializeTwentyFiveCentImage();
         this.initializeOneDollarImage();
         this.initializeFiveDollarImage();
+        this.initializeTwentyDollarImage();
     }
 
 
